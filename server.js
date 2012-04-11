@@ -52,7 +52,7 @@
 
   console.log('listening on :3000');
 
-  socket = io.listen(app);
+  socket = io.listen(app, { transports: ['websocket', 'xhr-polling'] });
 
   reply_types = {
     APPEND: 'integer',
